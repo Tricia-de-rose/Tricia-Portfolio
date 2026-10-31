@@ -1,0 +1,4495 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tricia De Rose | Portfolio</title>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500&display=swap"
+  rel="stylesheet"
+>
+
+<style>
+
+/* ==========================================
+   01. GENERAL SETTINGS
+========================================== */
+
+:root {
+  --navy: #07192c;
+  --teal: #9bd9d7;
+  --white: #f5f7fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "DM Sans", Arial, sans-serif;
+  background: var(--navy);
+  color: var(--white);
+}
+
+
+/* ==========================================
+   02. NAVIGATION
+========================================== */
+
+.site-nav {
+  background: #ffffff;
+  padding: 14px 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #e3eaf0;
+}
+
+.site-nav .logo {
+  color: #17263b;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  white-space: nowrap;
+}
+
+.site-nav .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 17px;
+}
+
+.site-nav .nav-links a {
+  color: #17263b;
+  text-decoration: none;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.site-nav .nav-links a:hover {
+  color: #527d9b;
+}
+
+
+/* ==========================================
+   03. HOMEPAGE BASE
+========================================== */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+
+  /* Wider content, matching Section 01 */
+  padding: 24px 3% 18px;
+
+  background:
+    radial-gradient(
+      ellipse at 95% 20%,
+      #204357 0%,
+      transparent 38%
+    ),
+    linear-gradient(
+      120deg,
+      #071527,
+      #0b2438
+    );
+}
+
+/* Shared width for main content and contact */
+.hero-main,
+.contact {
+  width: 100%;
+  max-width: 1420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* ==========================================
+   04. MAIN TWO-COLUMN LAYOUT
+========================================== */
+
+.hero-main {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+
+  /* More room for text and portrait */
+  grid-template-columns:
+    minmax(0, 1.65fr)
+    minmax(0, 0.85fr);
+
+  gap: clamp(35px, 5vw, 85px);
+  align-items: center;
+}
+
+.hero-content {
+  min-width: 0;
+}
+
+.hero-image {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+/* ==========================================
+   05. NAME ABOVE HEADLINE
+========================================== */
+
+.eyebrow {
+  color: var(--teal);
+  letter-spacing: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+
+/* ==========================================
+   06. MAIN HEADLINE
+========================================== */
+
+.hero h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(36px, 4.1vw, 60px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -1px;
+  margin: 0 0 12px;
+}
+
+.hero h1 span {
+  color: var(--teal);
+}
+
+
+/* ==========================================
+   07. INTRODUCTION
+========================================== */
+
+.intro {
+  max-width: 750px;
+  font-size: 14px;
+  line-height: 1.48;
+  color: #d7e0e8;
+}
+
+.intro p {
+  margin: 0 0 7px;
+}
+
+.intro p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ==========================================
+   08. SKILL TAGS
+========================================== */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 12px 0 13px;
+}
+
+.tags span {
+  padding: 5px 11px;
+  border: 1px solid #476276;
+  border-radius: 30px;
+  font-size: 9px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+
+/* ==========================================
+   09. BUTTONS
+========================================== */
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
+  font-weight: 700;
+  transition: background 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--teal);
+  color: var(--navy);
+}
+
+.btn-primary:hover {
+  background: #b8efed;
+}
+
+.btn-outline {
+  border: 1px solid #668298;
+  color: #ffffff;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* ==========================================
+   10. PORTRAIT
+========================================== */
+
+.portrait {
+  display: block;
+
+  width: 100%;
+  max-width: 350px;
+  height: 350px;
+
+  object-fit: cover;
+  object-position: center top;
+
+  /* Align image toward the right */
+  margin: 0;
+}
+
+
+/* ==========================================
+   11. CONTACT INFORMATION
+========================================== */
+
+.contact {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #345064;
+}
+
+.contact h2 {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--teal);
+  margin: 0 0 8px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px 30px;
+}
+
+.contact-item {
+  font-size: 12px;
+  color: #d8e5ec;
+  overflow-wrap: anywhere;
+}
+
+.contact-item strong {
+  color: #ffffff;
+}
+
+.contact-item a {
+  color: #d8e5ec;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  color: var(--teal);
+  text-decoration: underline;
+}
+
+
+/* ==========================================
+   12. RESPONSIVE NAVIGATION
+========================================== */
+
+@media (max-width: 1200px) {
+
+  .site-nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .site-nav .nav-links {
+    justify-content: center;
+    gap: 12px 18px;
+  }
+
+}
+
+
+/* ==========================================
+   13. TABLET
+========================================== */
+
+@media (max-width: 800px) {
+
+  .hero {
+    padding: 24px 5% 18px;
+  }
+
+  .hero-main {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .hero-image {
+    justify-content: center;
+  }
+
+  .portrait {
+    height: 300px;
+    width: min(100%, 300px);
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* ==========================================
+   14. MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+
+  .site-nav {
+    padding: 14px 4%;
+  }
+
+  .site-nav .nav-links {
+    gap: 10px 12px;
+  }
+
+  .site-nav .nav-links a {
+    font-size: 9px;
+  }
+
+  .hero {
+    padding: 20px 5% 16px;
+  }
+
+  .hero h1 {
+    font-size: clamp(32px, 9vw, 42px);
+  }
+
+  .intro {
+    font-size: 13px;
+  }
+
+  .portrait {
+    height: 260px;
+    width: min(100%, 260px);
+  }
+
+  .contact {
+    margin-top: 14px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- ==========================================
+     NAVIGATION BAR
+========================================== -->
+
+<nav class="site-nav">
+
+  <a href="#home" class="logo">
+    TRICIA DE ROSE
+  </a>
+
+  <div class="nav-links">
+
+    <a href="#home">Home</a>
+
+    <a href="#about">01 / About</a>
+
+    <a href="#business-intelligence">
+      02 / Business Intelligence
+    </a>
+
+    <a href="#machine-learning">
+      03 / Machine Learning
+    </a>
+
+    <a href="#strategic-consulting">
+      04 / Strategic Consulting
+    </a>
+
+    <a href="#research-visualisation">
+      05 / Research &amp; Visualisation
+    </a>
+
+    <a href="#contact">Contact</a>
+
+  </div>
+
+</nav>
+
+
+<!-- ==========================================
+     HOMEPAGE
+========================================== -->
+
+<section class="hero" id="home">
+
+  <div class="hero-main">
+
+
+    <!-- LEFT COLUMN: INTRODUCTION -->
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        TRICIA DE ROSE
+      </div>
+
+      <h1>
+        Turning Data into Insight.<br>
+        <span>Insight into Impact.</span>
+      </h1>
+
+      <div class="intro">
+
+        <p>
+          I'm Tricia De Rose, a Monash University
+          Bachelor of Commerce graduate with a
+          background in Data Analytics, Finance
+          and Economics.
+        </p>
+
+        <p>
+          My experience spans business intelligence,
+          financial analysis, predictive modelling
+          and strategic consulting. I bring together
+          analytical thinking, technical expertise
+          and commercial understanding to uncover
+          meaningful insights, solve complex
+          problems and support informed
+          decision-making.
+        </p>
+
+        <p>
+          Driven by curiosity and continuous
+          learning, I'm passionate about applying
+          data and strategic thinking to create
+          value across industries, organisations
+          and emerging business challenges.
+        </p>
+
+      </div>
+
+
+      <!-- SKILL TAGS -->
+
+      <div class="tags">
+
+        <span>DATA ANALYTICS</span>
+        <span>FINANCE</span>
+        <span>ECONOMICS</span>
+        <span>BUSINESS INTELLIGENCE</span>
+        <span>STRATEGY</span>
+
+      </div>
+
+
+      <!-- EXPLORE BUTTON -->
+
+      <div class="buttons">
+
+        <a
+          href="#business-intelligence"
+          class="btn btn-primary"
+        >
+          Explore My Work →
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- RIGHT COLUMN: PORTRAIT -->
+
+    <div class="hero-image">
+
+      <img
+        src="Images/TRICIA (2).png"
+        alt="Tricia De Rose"
+        class="portrait"
+      >
+
+    </div>
+
+  </div>
+
+
+  <!-- ==========================================
+       CONTACT INFORMATION
+  ========================================== -->
+
+  <div class="contact" id="contact">
+
+    <h2>CONNECT WITH ME</h2>
+
+    <div class="contact-grid">
+
+
+      <!-- EMAIL -->
+
+      <div class="contact-item">
+
+        <strong>Email:</strong>
+
+        <a href="mailto:flotriciaderose@gmail.com">
+          flotriciaderose@gmail.com
+        </a>
+
+      </div>
+
+
+      <!-- PHONE -->
+
+      <div class="contact-item">
+
+        <strong>Phone:</strong>
+
+        <a href="tel:+61416034777">
+          +61 416 034 777
+        </a>
+
+      </div>
+
+
+      <!-- LINKEDIN -->
+
+      <div class="contact-item">
+
+        <strong>LinkedIn:</strong>
+
+        <a
+          href="https://www.linkedin.com/in/tricia-de-rose/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          tricia-de-rose
+        </a>
+
+      </div>
+
+
+      <!-- INSTAGRAM -->
+
+      <div class="contact-item">
+
+        <strong>Instagram:</strong>
+
+        <a
+          href="https://www.instagram.com/tricia_de_rose_/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @tricia_de_rose_
+        </a>
+
+      </div>
+
+
+      <!-- FACEBOOK -->
+
+      <div class="contact-item">
+
+        <strong>Facebook:</strong>
+
+        <a
+          href="https://www.facebook.com/triciaderose2004"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          triciaderose2004
+        </a>
+
+      </div>
+
+
+      <!-- LOCATION -->
+
+      <div class="contact-item">
+
+        <strong>Location:</strong>
+        Melbourne, Australia
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- END HOMEPAGE -->
+
+<!-- INSERT SECTION 01 BELOW THIS LINE -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+     SECTION 01 — ABOUT ME
+     COMPLETE UPDATED VERSION
+===================================================== -->
+
+<style>
+
+/* SECTION BASE */
+
+#about {
+  --about-navy: #18394f;
+  --about-teal: #527c91;
+  --about-muted: #536776;
+
+  background: #f3f6f8;
+  color: var(--about-navy);
+  padding: 0 0 24px;
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+#about,
+#about * {
+  box-sizing: border-box;
+}
+
+#about .about-container {
+  width: min(95%, 1450px);
+  margin: 0 auto;
+}
+
+/* ==========================================
+   FULL-WIDTH DUSTY BLUE TITLE STRIP
+========================================== */
+
+#about .about-header {
+  width: 100%;
+  background: #c9d9e2;
+  border-bottom: 1px solid #b9cbd5;
+  padding: 20px 0 23px;
+}
+
+#about .about-header .about-eyebrow {
+  color: #416d83;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+#about .about-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(30px, 3vw, 42px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  color: #18394f;
+  margin: 0 0 13px;
+}
+
+#about .about-title span {
+  color: #18394f;
+}
+
+/* ==========================================
+   TWO-COLUMN ABOUT ME INTRODUCTION
+========================================== */
+
+#about .about-description-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 35px;
+  align-items: start;
+}
+
+#about .about-description-column p {
+  color: #40596b;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0 0 12px;
+}
+
+#about .about-description-column p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   MAIN CONTENT AREA
+========================================== */
+
+#about .about-main {
+  padding-top: 20px;
+}
+
+#about .background-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0 0 16px;
+}
+
+#about .background-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(24px, 2.2vw, 31px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #18394f;
+  margin: 0;
+  white-space: nowrap;
+}
+
+#about .background-heading::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #cbd8df;
+}
+
+/* ==========================================
+   FOUR BACKGROUND CARDS
+========================================== */
+
+#about .about-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  align-items: stretch;
+}
+
+#about .about-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #dbe5ea;
+  border-radius: 11px;
+  padding: 15px;
+  box-shadow: 0 5px 18px rgba(24, 57, 79, 0.045);
+  transition: border-color 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+#about .about-card:hover {
+  border-color: #9ebbc9;
+  box-shadow: 0 7px 22px rgba(24, 57, 79, 0.08);
+}
+
+/* CARD LABELS */
+
+#about .about-card .about-eyebrow {
+  color: #527c91;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin: 0 0 7px;
+}
+
+#about .about-card h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(20px, 1.65vw, 25px);
+  font-weight: 400;
+  line-height: 1.15;
+  color: #18394f;
+  margin: 0 0 9px;
+}
+
+#about .card-accent {
+  width: 36px;
+  height: 3px;
+  border-radius: 3px;
+  background: #527c91;
+  margin-bottom: 11px;
+}
+
+#about .about-card p {
+  color: #536776;
+  font-size: 11px;
+  line-height: 1.5;
+  margin: 0 0 7px;
+}
+
+#about .about-card strong {
+  color: #18394f;
+}
+
+/* ==========================================
+   EDUCATION
+========================================== */
+
+#about .education-details {
+  margin-bottom: 12px;
+}
+
+/* ==========================================
+   PROFESSIONAL EXPERIENCE
+========================================== */
+
+#about .jobs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+#about .job {
+  padding: 7px 0;
+  border-bottom: 1px solid #e7e9e3;
+}
+
+#about .job:first-child {
+  padding-top: 0;
+}
+
+#about .job:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+#about .job strong {
+  display: block;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+#about .job span {
+  display: block;
+  color: #536776;
+  font-size: 10px;
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+/* ==========================================
+   TECHNICAL EXPERTISE
+========================================== */
+
+#about .skill-category {
+  margin-bottom: 12px;
+}
+
+#about .skill-category:last-child {
+  margin-bottom: 0;
+}
+
+#about .skill-category h4 {
+  color: #18394f;
+  font-size: 11px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+#about .skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+#about .skill-pills span {
+  background: #eef4f7;
+  border: 1px solid #dce8ed;
+  color: #3f6579;
+  border-radius: 20px;
+  padding: 5px 8px;
+  font-size: 9px;
+  line-height: 1.2;
+}
+
+/* ==========================================
+   SWIMMING ACHIEVEMENTS
+========================================== */
+
+#about .swim-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+  margin: 10px 0 12px;
+}
+
+#about .swim-stat {
+  background: #f1f6f8;
+  border: 1px solid #dce7ec;
+  border-radius: 7px;
+  padding: 10px;
+  text-align: center;
+}
+
+#about .swim-stat b {
+  display: block;
+  color: #527c91;
+  font-size: 25px;
+  line-height: 1.1;
+}
+
+#about .swim-stat span {
+  display: block;
+  color: #536776;
+  font-size: 10px;
+  margin-top: 4px;
+}
+
+/* ==========================================
+   LARGER PHOTOGRAPHS — NO CROPPING
+========================================== */
+
+#about .about-figure {
+  margin: 12px 0 0;
+  padding: 0;
+}
+
+#about .image-frame {
+  width: 100%;
+  height: 245px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #e8eff3;
+  border: 1px solid #dbe5ea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about .image-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+#about .about-figure figcaption {
+  color: #697c80;
+  font-size: 10px;
+  line-height: 1.4;
+  text-align: center;
+  margin-top: 6px;
+}
+
+/* ==========================================
+   RECOGNITION LINKS
+========================================== */
+
+#about .swim-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 13px;
+  margin-top: 10px;
+}
+
+#about .swim-links a {
+  color: #416f86;
+  font-size: 10px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#about .swim-links a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   SMALL LAPTOP SCREENS
+========================================== */
+
+@media (min-width: 1101px) and (max-height: 800px) {
+
+  #about .about-header {
+    padding: 15px 0 17px;
+  }
+
+  #about .about-main {
+    padding-top: 13px;
+  }
+
+  #about .about-card {
+    padding: 12px;
+  }
+
+  #about .image-frame {
+    height: 215px;
+  }
+
+  #about .skill-category {
+    margin-bottom: 8px;
+  }
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1100px) {
+
+  #about .about-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #about .image-frame {
+    height: 250px;
+  }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 700px) {
+
+  #about .about-description-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  #about .about-container {
+    width: 92%;
+  }
+
+  #about .about-header {
+    padding: 20px 0;
+  }
+
+  #about .about-header .about-eyebrow {
+    font-size: 15px;
+  }
+
+  #about .about-title {
+    font-size: 30px;
+  }
+
+  #about .about-description-column p {
+    font-size: 12px;
+  }
+
+  #about .background-title {
+    font-size: 23px;
+    white-space: normal;
+  }
+
+  #about .about-cards {
+    grid-template-columns: 1fr;
+  }
+
+  #about .about-card {
+    padding: 16px;
+  }
+
+  #about .image-frame {
+    height: 260px;
+  }
+
+}
+
+
+/* ==========================================
+   FIX CARD SPACING AND PHOTO ALIGNMENT
+========================================== */
+
+/* Keep all four cards the same height */
+#about .about-cards {
+  align-items: stretch;
+}
+
+/* Allow content to fill each card vertically */
+#about .about-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Push photographs towards the bottom */
+#about .about-figure {
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-top: 12px;
+}
+
+/* Keep photograph dimensions consistent */
+#about .image-frame {
+  height: 215px;
+}
+
+/* Show complete photographs */
+#about .image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Keep swimming links below the photograph */
+#about .swim-links {
+  margin-top: 10px;
+}
+
+/* Responsive image sizes */
+@media (max-width: 1100px) {
+  #about .image-frame {
+    height: 250px;
+  }
+}
+
+@media (max-width: 700px) {
+  #about .image-frame {
+    height: 260px;
+  }
+}
+
+</style>
+
+
+<!-- =====================================================
+     SECTION 01 — HTML CONTENT
+===================================================== -->
+
+<section id="about">
+
+  <!-- TITLE AND TWO-COLUMN INTRODUCTION -->
+
+  <div class="about-header">
+
+    <div class="about-container">
+
+      <div class="about-eyebrow">
+        01 / ABOUT ME
+      </div>
+
+      <h2 class="about-title">
+        A Multidisciplinary Perspective.
+        <span>An Analytical Mindset.</span>
+      </h2>
+
+      <div class="about-description-grid">
+
+        <!-- LEFT COLUMN -->
+
+        <div class="about-description-column">
+
+          <p>
+            I am a Monash University Bachelor of Commerce graduate
+            with a background spanning data analytics, finance and
+            economics. My professional and academic experiences have
+            shaped my ability to approach business challenges from
+            multiple perspectives, combining quantitative analysis
+            with financial understanding and strategic thinking.
+          </p>
+
+          <p>
+            Through my experience in business intelligence, financial
+            reporting and consulting, I have worked with complex
+            information to evaluate organisational performance,
+            identify patterns and communicate insights that support
+            decision-making. My academic projects have further
+            strengthened my capabilities in machine learning,
+            statistical modelling, database development and
+            data visualisation.
+          </p>
+
+        </div>
+
+        <!-- RIGHT COLUMN -->
+
+        <div class="about-description-column">
+
+          <p>
+            Beyond academics and professional experience, representing
+            Sri Lanka as a national swimming team athlete and achieving
+            multiple national records and championship titles have
+            played a defining role in my personal development.
+            Over 14 years of competitive swimming, including
+            international representation, I have developed discipline,
+            resilience, leadership, adaptability and the ability to
+            perform under pressure, qualities I carry into every
+            professional challenge.
+          </p>
+
+          <p>
+            I am motivated by opportunities to learn, solve meaningful
+            problems and contribute to organisations through thoughtful
+            analysis, innovation and continuous improvement.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- BACKGROUND CARDS -->
+
+  <div class="about-container about-main">
+
+    <div class="background-heading">
+      <h2 class="background-title">
+        My Background at a Glance
+      </h2>
+    </div>
+
+    <div class="about-cards">
+
+      <!-- CARD 01 — EDUCATION -->
+
+      <article class="about-card education-card">
+
+        <div class="about-eyebrow">
+          01 / EDUCATION
+        </div>
+
+        <h3>Monash University</h3>
+
+        <div class="card-accent"></div>
+
+        <div class="education-details">
+          <p><strong>Bachelor of Commerce</strong></p>
+          <p><strong>Major:</strong> Data Analytics</p>
+          <p><strong>Minors:</strong> Finance and Economics</p>
+          <p>Melbourne, Australia · 2023–2026</p>
+        </div>
+
+        <figure class="about-figure">
+
+          <div class="image-frame">
+            <img
+              src="Images/graduation-combined.png"
+              alt="Monash University graduation portrait and ceremony"
+              loading="lazy"
+            >
+          </div>
+
+          <figcaption>
+            Monash University Graduation · 2026
+          </figcaption>
+
+        </figure>
+
+      </article>
+
+
+      <!-- CARD 02 — PROFESSIONAL EXPERIENCE -->
+
+      <article class="about-card experience-card">
+
+        <div class="about-eyebrow">
+          02 / PROFESSIONAL EXPERIENCE
+        </div>
+
+        <h3>Business &amp; Analytics</h3>
+
+        <div class="card-accent"></div>
+
+        <div class="jobs">
+
+          <div class="job">
+            <strong>VS Information Systems</strong>
+            <span>Data Analyst Intern</span>
+          </div>
+
+          <div class="job">
+            <strong>Sofitel Melbourne on Collins</strong>
+            <span>University Consulting Project</span>
+          </div>
+
+          <div class="job">
+            <strong>Herald Enterprises</strong>
+            <span>Accounts Assistant / Finance Analyst</span>
+          </div>
+
+          <div class="job">
+            <strong>Tele Energy Pty Ltd</strong>
+            <span>Trainee Administration Officer</span>
+          </div>
+
+        </div>
+
+        <figure class="about-figure">
+
+          <div class="image-frame">
+            <img
+              src="Images/sofitel-team.png"
+              alt="Sofitel Melbourne consulting engagement"
+              loading="lazy"
+            >
+          </div>
+
+          <figcaption>
+            Sofitel Melbourne · Consulting Engagement
+          </figcaption>
+
+        </figure>
+
+      </article>
+
+
+      <!-- CARD 03 — TECHNICAL EXPERTISE -->
+
+
+<!-- CARD 03 — TECHNICAL EXPERTISE -->
+
+<article class="about-card technical-card">
+
+  <div class="about-eyebrow">
+    03 / TECHNICAL EXPERTISE
+  </div>
+
+  <h3>My Analytical Toolkit</h3>
+
+  <div class="card-accent"></div>
+
+  <div class="skill-category">
+    <h4>Programming &amp; Data</h4>
+    <div class="skill-pills">
+      <span>Python</span>
+      <span>SQL</span>
+      <span>R</span>
+      <span>Oracle</span>
+      <span>MongoDB</span>
+      <span>Data Cleaning</span>
+      <span>EDA</span>
+      <span>Data Transformation</span>
+    </div>
+  </div>
+
+  <div class="skill-category">
+    <h4>Business Intelligence</h4>
+    <div class="skill-pills">
+      <span>Power BI</span>
+      <span>DAX</span>
+      <span>Tableau</span>
+      <span>Excel</span>
+      <span>Dashboards</span>
+      <span>KPI Reporting</span>
+    </div>
+  </div>
+
+  <div class="skill-category">
+    <h4>Statistics &amp; Modelling</h4>
+    <div class="skill-pills">
+      <span>Machine Learning</span>
+      <span>Regression</span>
+      <span>ANOVA</span>
+      <span>Hypothesis Testing</span>
+      <span>Predictive Modelling</span>
+      <span>Statistical Analysis</span>
+    </div>
+  </div>
+
+  <div class="skill-category">
+    <h4>Economics &amp; Finance</h4>
+    <div class="skill-pills">
+      <span>Economic Research</span>
+      <span>Market Analysis</span>
+      <span>Industry Trends</span>
+      <span>Financial Analysis</span>
+      <span>Profitability</span>
+      <span>Financial Reporting</span>
+    </div>
+  </div>
+
+</article>
+
+
+
+      <!-- CARD 04 — LEADERSHIP & ACHIEVEMENT -->
+
+      <article class="about-card leadership-card">
+
+        <div class="about-eyebrow">
+          04 / LEADERSHIP &amp; ACHIEVEMENT
+        </div>
+
+        <h3>Beyond the Classroom</h3>
+
+        <div class="card-accent"></div>
+
+        <p>
+          Former Sri Lanka National Swimming Team athlete
+          with international competitive experience,
+          national records and championship titles.
+        </p>
+
+        <div class="swim-stats">
+
+          <div class="swim-stat">
+            <b>14+</b>
+            <span>Years competing</span>
+          </div>
+
+          <div class="swim-stat">
+            <b>4</b>
+            <span>National records</span>
+          </div>
+
+        </div>
+
+        <figure class="about-figure">
+
+          <div class="image-frame">
+            <img
+              src="Images/swim-team.jpeg"
+              alt="Sri Lanka National Swimming Team"
+              loading="lazy"
+            >
+          </div>
+
+          <figcaption>
+            Representing Sri Lanka in competitive swimming
+          </figcaption>
+
+        </figure>
+
+        <div class="swim-links">
+
+          <a
+            href="https://www.instagram.com/p/C29vuqRISmj/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            National Team Feature ↗
+          </a>
+
+          <a
+            href="https://sundaytimes.pressreader.com/article/281809993468451"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Newspaper Recognition ↗
+          </a>
+
+        </div>
+
+      </article>
+
+    </div> <!-- END FOUR CARDS -->
+
+  </div> <!-- END MAIN CONTENT -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<!-- =====================================================
+     SECTION 02 — BUSINESS INTELLIGENCE
+     & FINANCIAL ANALYTICS
+
+     CLEAN, ORGANISED VERSION
+     ORIGINAL CONTENT AND LAYOUT PRESERVED
+===================================================== -->
+
+<style>
+
+/* ==========================================
+   01. SECTION BASE
+========================================== */
+
+#business-intelligence {
+  --bi-dark: #183e45;
+  --bi-teal: #287c83;
+  --bi-muted: #526b70;
+  --bi-border: #cbded9;
+
+  background: #dce8e5;
+  color: var(--bi-dark);
+  font-family: "DM Sans", Arial, sans-serif;
+  padding: 0 0 20px;
+}
+
+#business-intelligence,
+#business-intelligence * {
+  box-sizing: border-box;
+}
+
+#business-intelligence .bi-wrap {
+  width: min(94%, 1420px);
+  margin: 0 auto;
+}
+
+
+/* ==========================================
+   02. FULL-WIDTH TITLE STRIP
+========================================== */
+
+#business-intelligence .bi-header {
+  background: #183e45;
+  color: #ffffff;
+  padding: 15px 0 17px;
+}
+
+#business-intelligence .bi-eyebrow {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  color: #a4dedb;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+#business-intelligence .bi-header h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(30px, 3vw, 41px);
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 7px;
+  color: #ffffff;
+}
+
+#business-intelligence .bi-header h2 span {
+  color: #ffffff;
+}
+
+#business-intelligence .bi-header p {
+  font-size: 12px;
+  line-height: 1.45;
+  color: #e0eeeb;
+  margin: 0;
+  max-width: 1100px;
+}
+
+
+/* ==========================================
+   03. TWO PROJECTS SIDE BY SIDE
+========================================== */
+
+#business-intelligence .bi-projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  padding-top: 15px;
+  align-items: stretch;
+}
+
+#business-intelligence .bi-project {
+  background: #f8fbfa;
+  border: 1px solid var(--bi-border);
+  border-radius: 12px;
+  padding: 15px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 18px rgba(18, 56, 65, 0.04);
+}
+
+
+/* ==========================================
+   04. PROJECT HEADINGS
+========================================== */
+
+#business-intelligence .bi-project-label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #287c83;
+  margin-bottom: 4px;
+}
+
+#business-intelligence .bi-project h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(25px, 2.2vw, 32px);
+  font-weight: 400;
+  line-height: 1.12;
+  margin: 0 0 5px;
+  color: #183e45;
+}
+
+#business-intelligence .bi-project-desc {
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--bi-muted);
+  margin: 0 0 12px;
+}
+
+
+/* ==========================================
+   05. DASHBOARD IMAGE GALLERY
+========================================== */
+
+#business-intelligence .bi-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  margin-bottom: 13px;
+}
+
+#business-intelligence .bi-image-card {
+  margin: 0;
+  min-width: 0;
+}
+
+#business-intelligence .bi-image-card a {
+  display: block;
+  background: #e7eeed;
+  border: 1px solid #c6d7d4;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+#business-intelligence .bi-image-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+#business-intelligence .bi-image-card a:hover img {
+  transform: scale(1.04);
+}
+
+#business-intelligence .bi-image-card figcaption {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  color: #426b73;
+  margin-top: 6px;
+}
+
+
+/* ==========================================
+   06. KPI CARDS
+========================================== */
+
+#business-intelligence .bi-kpis {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+#business-intelligence .bi-kpi {
+  background: #edf4f2;
+  border-top: 3px solid #438b8b;
+  border-radius: 7px;
+  padding: 11px 10px;
+  min-width: 0;
+}
+
+#business-intelligence .bi-kpi:nth-child(2) {
+  background: #f6f0ec;
+  border-top-color: #ce9a85;
+}
+
+#business-intelligence .bi-kpi:nth-child(3) {
+  background: #f0eff8;
+  border-top-color: #9188b8;
+}
+
+#business-intelligence .bi-kpi strong {
+  display: block;
+  color: #183e45;
+  font-size: clamp(20px, 1.9vw, 27px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.6px;
+}
+
+#business-intelligence .bi-kpi span {
+  display: block;
+  color: #526b70;
+  font-size: 10px;
+  line-height: 1.3;
+  margin-top: 5px;
+}
+
+
+/* ==========================================
+   07. ANALYTICAL SUMMARY
+========================================== */
+
+#business-intelligence .bi-insight {
+  color: #45636b;
+  font-size: 11px;
+  line-height: 1.45;
+  margin: 0 0 12px;
+}
+
+#business-intelligence .bi-insight strong {
+  color: #183e45;
+}
+
+
+/* ==========================================
+   08. PROJECT BUTTONS
+========================================== */
+
+#business-intelligence .bi-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  background: #183e45;
+  color: #ffffff;
+  border-radius: 25px;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  margin-top: auto;
+  transition: background 0.2s ease;
+}
+
+#business-intelligence .bi-link:hover {
+  background: #287c83;
+}
+
+
+/* ==========================================
+   09. COMPACT TOOLS & CAPABILITIES
+========================================== */
+
+#business-intelligence .bi-toolkit {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  margin-top: 13px;
+}
+
+#business-intelligence .bi-toolkit strong {
+  font-size: 10px;
+  color: #183e45;
+  margin-right: 6px;
+}
+
+#business-intelligence .bi-toolkit span {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #c8dcd7;
+  border-radius: 20px;
+  color: #315f65;
+  padding: 5px 10px;
+  font-size: 10px;
+}
+
+
+/* ==========================================
+   10. TABLET RESPONSIVENESS
+========================================== */
+
+@media (max-width: 900px) {
+
+  #business-intelligence .bi-projects {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* ==========================================
+   11. MOBILE RESPONSIVENESS
+========================================== */
+
+@media (max-width: 550px) {
+
+  #business-intelligence .bi-wrap {
+    width: 92%;
+  }
+
+  #business-intelligence .bi-header {
+    padding: 15px 0;
+  }
+
+  #business-intelligence .bi-eyebrow {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  #business-intelligence .bi-header h2 {
+    font-size: 29px;
+  }
+
+  #business-intelligence .bi-project {
+    padding: 12px;
+  }
+
+  #business-intelligence .bi-image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #business-intelligence .bi-kpi {
+    padding: 8px 6px;
+  }
+
+  #business-intelligence .bi-kpi strong {
+    font-size: 17px;
+  }
+
+  #business-intelligence .bi-kpi span {
+    font-size: 9px;
+  }
+
+}
+
+</style>
+
+
+<!-- =====================================================
+     SECTION 02 — HTML CONTENT
+===================================================== -->
+
+<section id="business-intelligence">
+
+  <!-- ==========================================
+       FULL-WIDTH TITLE STRIP
+  ========================================== -->
+
+  <div class="bi-header">
+
+    <div class="bi-wrap">
+
+      <div class="bi-eyebrow">
+        02 / BUSINESS INTELLIGENCE &amp; FINANCIAL ANALYTICS
+      </div>
+
+      <h2>
+        Turning Financial Data into
+        <span>Business Insights.</span>
+      </h2>
+
+      <p>
+        During my Data Analyst internship at VS Information
+        Systems, I worked with Power BI dashboards to analyse
+        revenue, profitability, project performance and
+        financial obligations, supporting clearer
+        business performance reporting.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==========================================
+       PROJECT CARDS
+  ========================================== -->
+
+  <div class="bi-wrap">
+
+    <div class="bi-projects">
+
+
+      <!-- ======================================
+           PROJECT 01 — SMILE MEDIA
+      ====================================== -->
+
+      <article class="bi-project">
+
+        <div class="bi-project-label">
+          CASE STUDY 01 / SMILE MEDIA
+        </div>
+
+        <h3>Smile Media</h3>
+
+        <p class="bi-project-desc">
+          Revenue, project profitability and
+          debtor analysis through Power BI.
+        </p>
+
+
+        <!-- SMILE MEDIA DASHBOARD IMAGES -->
+
+        <div class="bi-image-grid">
+
+          <figure class="bi-image-card">
+
+            <a
+              href="Images/smile-project.png"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="Images/smile-project.png"
+                alt="Smile Media Overall Project Analysis"
+                loading="lazy"
+              >
+            </a>
+
+            <figcaption>
+              Overall Project Analysis
+            </figcaption>
+
+          </figure>
+
+
+          <figure class="bi-image-card">
+
+            <a
+              href="Images/smile-debtors.png"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="Images/smile-debtors.png"
+                alt="Smile Media Debtor Analysis"
+                loading="lazy"
+              >
+            </a>
+
+            <figcaption>
+              Debtor &amp; Ageing Analysis
+            </figcaption>
+
+          </figure>
+
+        </div>
+
+
+        <!-- SMILE MEDIA KPIs -->
+
+        <div class="bi-kpis">
+
+          <div class="bi-kpi">
+            <strong>6.91M</strong>
+            <span>Actual project revenue</span>
+          </div>
+
+          <div class="bi-kpi">
+            <strong>12</strong>
+            <span>Projects analysed</span>
+          </div>
+
+          <div class="bi-kpi">
+            <strong>2.39M</strong>
+            <span>Outstanding debtors</span>
+          </div>
+
+        </div>
+
+
+        <!-- SMILE MEDIA ANALYTICAL SUMMARY -->
+
+        <p class="bi-insight">
+          <strong>Analytical focus:</strong>
+          Revenue trends, project-level financial performance,
+          profitability and receivables ageing.
+        </p>
+
+
+        <!-- SMILE MEDIA FULL DASHBOARD LINK -->
+
+        <a
+          class="bi-link"
+          href="https://drive.google.com/file/d/1vlV9MYrMndsBxeNqY2jrMaJdbab4O_rM/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          VIEW FULL SMILE MEDIA DASHBOARD ↗
+        </a>
+
+      </article>
+
+
+      <!-- ======================================
+           PROJECT 02 — ALTRIA
+      ====================================== -->
+
+      <article class="bi-project">
+
+        <div class="bi-project-label">
+          CASE STUDY 02 / ALTRIA
+        </div>
+
+        <h3>Altria</h3>
+
+        <p class="bi-project-desc">
+          Sales performance, gross profitability
+          and financial reporting through Power BI.
+        </p>
+
+
+        <!-- ALTRIA DASHBOARD IMAGES -->
+
+        <div class="bi-image-grid">
+
+          <figure class="bi-image-card">
+
+            <a
+              href="Images/altria-sales.png"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="Images/altria-sales.png"
+                alt="Altria Sales Performance YTD"
+                loading="lazy"
+              >
+            </a>
+
+            <figcaption>
+              Sales Performance (YTD)
+            </figcaption>
+
+          </figure>
+
+
+          <figure class="bi-image-card">
+
+            <a
+              href="Images/altria-profit.png"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="Images/altria-profit.png"
+                alt="Altria Gross Profit YTD"
+                loading="lazy"
+              >
+            </a>
+
+            <figcaption>
+              Gross Profit Analysis (YTD)
+            </figcaption>
+
+          </figure>
+
+        </div>
+
+
+        <!-- ALTRIA KPIs -->
+
+        <div class="bi-kpis">
+
+          <div class="bi-kpi">
+            <strong>801.97M</strong>
+            <span>YTD sales · Mar 2025</span>
+          </div>
+
+          <div class="bi-kpi">
+            <strong>240.79M</strong>
+            <span>YTD gross profit · Mar 2025</span>
+          </div>
+
+          <div class="bi-kpi">
+            <strong>187.74M</strong>
+            <span>Outstanding creditors · May 2025</span>
+          </div>
+
+        </div>
+
+
+        <!-- ALTRIA ANALYTICAL SUMMARY -->
+
+        <p class="bi-insight">
+          <strong>Analytical focus:</strong>
+          Sales trends, gross profit performance,
+          project-level financial results and
+          creditor exposure.
+        </p>
+
+
+        <!-- ALTRIA FULL DASHBOARD LINK -->
+
+        <a
+          class="bi-link"
+          href="https://drive.google.com/file/d/1VJZOyUhZxt6znbQ2hPPBBIRvwdb2I1Tg/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          VIEW FULL ALTRIA DASHBOARD ↗
+        </a>
+
+      </article>
+
+    </div>
+
+
+    <!-- ==========================================
+         TOOLS & CAPABILITIES
+    ========================================== -->
+
+    <div class="bi-toolkit">
+
+      <strong>TOOLS &amp; CAPABILITIES</strong>
+
+      <span>Power BI</span>
+      <span>Financial Analytics</span>
+      <span>KPI Reporting</span>
+      <span>Data Visualisation</span>
+      <span>Revenue Analysis</span>
+      <span>Profitability Analysis</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- END SECTION 02 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+     SECTION 03 — MACHINE LEARNING
+     & PREDICTIVE ANALYTICS
+
+     PURPLE DESIGN
+     CONTENT & TWO-COLUMN PROJECT LAYOUT PRESERVED
+===================================================== -->
+
+<style>
+
+/* ==========================================
+   01. SECTION BASE
+========================================== */
+
+#machine-learning {
+  --ml-navy: #342b47;
+  --ml-purple: #72558e;
+  --ml-accent: #9c82b6;
+  --ml-text: #61566f;
+  --ml-border: #d9cde6;
+
+  background: linear-gradient(
+    135deg,
+    #e9e3f2 0%,
+    #f0eaf7 52%,
+    #e6ddf0 100%
+  );
+
+  color: var(--ml-navy);
+  font-family: "DM Sans", Arial, sans-serif;
+  padding: 0 0 26px;
+}
+
+#machine-learning,
+#machine-learning * {
+  box-sizing: border-box;
+}
+
+#machine-learning .ml-container {
+  width: min(1420px, calc(100% - 64px));
+  margin: 0 auto;
+}
+
+
+/* ==========================================
+   02. FULL-WIDTH PURPLE HEADER
+========================================== */
+
+#machine-learning .ml-header {
+  width: 100%;
+  background: #443453;
+  color: #ffffff;
+  padding: 17px 0 19px;
+  border-bottom: 1px solid #5e4b70;
+}
+
+#machine-learning .ml-eyebrow {
+  display: block;
+  color: #d7c3ed;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  line-height: 1.35;
+  text-transform: uppercase;
+  margin: 0 0 7px;
+}
+
+#machine-learning .ml-header h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(30px, 3vw, 41px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  margin: 0 0 7px;
+}
+
+#machine-learning .ml-header h2 span {
+  color: #ffffff;
+}
+
+#machine-learning .ml-header-description {
+  color: #e8dff0;
+  font-size: 12px;
+  line-height: 1.45;
+  max-width: 1100px;
+  margin: 0;
+}
+
+
+/* ==========================================
+   03. MAIN TWO-COLUMN LAYOUT
+========================================== */
+
+#machine-learning .ml-layout {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 0.95fr)
+    minmax(0, 1.05fr);
+  gap: 30px;
+  align-items: start;
+  padding-top: 20px;
+}
+
+
+/* ==========================================
+   04. LEFT COLUMN — PROJECT
+========================================== */
+
+#machine-learning .ml-content {
+  min-width: 0;
+}
+
+#machine-learning .ml-project-label {
+  color: #72558e;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 7px;
+}
+
+#machine-learning .ml-project-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(25px, 2.5vw, 33px);
+  font-weight: 400;
+  line-height: 1.15;
+  color: #342b47;
+  margin: 0 0 10px;
+}
+
+#machine-learning .ml-project-text {
+  color: var(--ml-text);
+  font-size: 12px;
+  line-height: 1.55;
+  margin: 0 0 14px;
+}
+
+
+/* ==========================================
+   05. TECHNICAL SKILL TAGS
+========================================== */
+
+#machine-learning .ml-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 15px;
+}
+
+#machine-learning .ml-tags span {
+  padding: 6px 11px;
+  border-radius: 20px;
+  background: #f8f5fc;
+  border: 1px solid #d9cde6;
+  color: #654b80;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+
+/* ==========================================
+   06. PROJECT BUTTON
+========================================== */
+
+#machine-learning .ml-button {
+  display: inline-block;
+  padding: 11px 18px;
+  background: #443453;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  transition: background 0.2s ease;
+}
+
+#machine-learning .ml-button:hover {
+  background: #72558e;
+}
+
+
+/* ==========================================
+   07. METHODOLOGY
+========================================== */
+
+#machine-learning .ml-methodology {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #d4c5e2;
+}
+
+#machine-learning .ml-methodology-heading {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 23px;
+  font-weight: 400;
+  color: #342b47;
+  margin: 0 0 13px;
+}
+
+#machine-learning .ml-method-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 17px;
+}
+
+#machine-learning .ml-method {
+  border-left: 3px solid #9c82b6;
+  padding: 2px 0 2px 12px;
+}
+
+#machine-learning .ml-method-number {
+  display: block;
+  color: #72558e;
+  font-size: 10px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+#machine-learning .ml-method h4 {
+  color: #342b47;
+  font-size: 12px;
+  margin: 0 0 5px;
+}
+
+#machine-learning .ml-method p {
+  color: var(--ml-text);
+  font-size: 11px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+/* ==========================================
+   08. RIGHT COLUMN
+========================================== */
+
+#machine-learning .ml-right {
+  min-width: 0;
+}
+
+
+/* ==========================================
+   09. MODEL PERFORMANCE IMAGE
+========================================== */
+
+#machine-learning .ml-image-panel {
+  background: #f8f5fc;
+  border: 1px solid #d9cde6;
+  border-radius: 12px;
+  padding: 11px;
+  margin: 0;
+  box-shadow: 0 7px 20px rgba(68, 52, 83, 0.06);
+}
+
+#machine-learning .ml-image-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+#machine-learning .ml-image-caption {
+  color: #756781;
+  font-size: 10px;
+  text-align: center;
+  margin: 8px 0 0;
+}
+
+
+/* ==========================================
+   10. KPI RESULT CARDS
+========================================== */
+
+#machine-learning .ml-results {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 13px;
+}
+
+#machine-learning .ml-stat {
+  background: #f8f5fc;
+  border: 1px solid #d9cde6;
+  border-top: 3px solid #9c82b6;
+  border-radius: 9px;
+  padding: 13px;
+}
+
+#machine-learning .ml-stat:nth-child(2) {
+  border-top-color: #78629a;
+}
+
+#machine-learning .ml-stat:nth-child(3) {
+  border-top-color: #b39acb;
+}
+
+#machine-learning .ml-stat strong {
+  display: block;
+  font-size: clamp(22px, 2.1vw, 29px);
+  line-height: 1.1;
+  color: #342b47;
+}
+
+#machine-learning .ml-stat span {
+  display: block;
+  color: #61566f;
+  font-size: 10px;
+  line-height: 1.4;
+  margin-top: 6px;
+}
+
+
+/* ==========================================
+   11. TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+  #machine-learning .ml-container {
+    width: calc(100% - 40px);
+  }
+
+  #machine-learning .ml-layout {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+}
+
+
+/* ==========================================
+   12. MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+  #machine-learning {
+    padding-bottom: 26px;
+  }
+
+  #machine-learning .ml-header {
+    padding: 16px 0;
+  }
+
+  #machine-learning .ml-eyebrow {
+    font-size: 13px;
+    letter-spacing: 1.2px;
+  }
+
+  #machine-learning .ml-header h2 {
+    font-size: 29px;
+  }
+
+  #machine-learning .ml-container {
+    width: calc(100% - 30px);
+  }
+
+  #machine-learning .ml-project-title {
+    font-size: 27px;
+  }
+
+  #machine-learning .ml-method-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  #machine-learning .ml-results {
+    gap: 7px;
+  }
+
+  #machine-learning .ml-stat {
+    padding: 9px;
+  }
+
+  #machine-learning .ml-stat strong {
+    font-size: 20px;
+  }
+
+  #machine-learning .ml-stat span {
+    font-size: 9px;
+  }
+
+}
+
+@media (max-width: 400px) {
+
+  #machine-learning .ml-results {
+    grid-template-columns: 1fr;
+  }
+
+  #machine-learning .ml-method-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+</style>
+
+
+<!-- =====================================================
+     SECTION 03 — HTML
+===================================================== -->
+
+<section id="machine-learning">
+
+  <!-- ==========================================
+       FULL-WIDTH PURPLE HEADER
+  ========================================== -->
+
+  <div class="ml-header">
+
+    <div class="ml-container">
+
+      <div class="ml-eyebrow">
+        03 / MACHINE LEARNING &amp; PREDICTIVE ANALYTICS
+      </div>
+
+      <h2>
+        From Complex Data to
+        <span>Predictive Intelligence.</span>
+      </h2>
+
+      <p class="ml-header-description">
+        Applying machine learning and statistical
+        modelling to uncover patterns, assess risks
+        and generate meaningful predictions from
+        complex datasets.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==========================================
+       MAIN CONTENT
+  ========================================== -->
+
+  <div class="ml-container">
+
+    <div class="ml-layout">
+
+
+      <!-- ======================================
+           LEFT COLUMN
+      ====================================== -->
+
+      <div class="ml-content">
+
+        <div class="ml-project-label">
+          FEATURED PROJECT / PREDICTIVE HEALTHCARE ANALYTICS
+        </div>
+
+        <h3 class="ml-project-title">
+          Predicting ICU Patient Mortality
+        </h3>
+
+        <p class="ml-project-text">
+          Developed and evaluated classification models
+          using the MIMIC-III critical care dataset.
+          Analysed patient records, compared predictive
+          algorithms and evaluated model performance
+          to identify the strongest approach to
+          mortality risk prediction.
+        </p>
+
+
+        <!-- TECHNICAL SKILLS -->
+
+        <div class="ml-tags">
+          <span>Python</span>
+          <span>Machine Learning</span>
+          <span>Classification</span>
+          <span>Predictive Modelling</span>
+          <span>ROC-AUC</span>
+        </div>
+
+
+        <!-- PROJECT LINK -->
+
+        <a
+          href="https://drive.google.com/file/d/1RHAJ7L0_zUIns284usPkhg2ZsUfPJ0d0/view"
+          class="ml-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          VIEW FULL MACHINE LEARNING PROJECT ↗
+        </a>
+
+
+        <!-- ==================================
+             METHODOLOGY
+        ================================== -->
+
+        <div class="ml-methodology">
+
+          <h3 class="ml-methodology-heading">
+            Methodology &amp; Technical Approach
+          </h3>
+
+          <div class="ml-method-grid">
+
+
+            <!-- STEP 01 -->
+
+            <div class="ml-method">
+
+              <span class="ml-method-number">
+                01 /
+              </span>
+
+              <h4>Data Preparation</h4>
+
+              <p>
+                Cleaned clinical data, handled missing
+                values and prepared features for modelling.
+              </p>
+
+            </div>
+
+
+            <!-- STEP 02 -->
+
+            <div class="ml-method">
+
+              <span class="ml-method-number">
+                02 /
+              </span>
+
+              <h4>Model Development</h4>
+
+              <p>
+                Compared Logistic Regression, KNN,
+                Decision Trees, Random Forest,
+                Neural Networks and boosting methods.
+              </p>
+
+            </div>
+
+
+            <!-- STEP 03 -->
+
+            <div class="ml-method">
+
+              <span class="ml-method-number">
+                03 /
+              </span>
+
+              <h4>Model Evaluation</h4>
+
+              <p>
+                Assessed classification performance
+                using out-of-sample ROC-AUC
+                and Kaggle scores.
+              </p>
+
+            </div>
+
+
+            <!-- STEP 04 -->
+
+            <div class="ml-method">
+
+              <span class="ml-method-number">
+                04 /
+              </span>
+
+              <h4>Results &amp; Interpretation</h4>
+
+              <p>
+                XGBoost achieved the strongest reported
+                performance with an out-of-sample
+                ROC-AUC of 0.9575.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ======================================
+           RIGHT COLUMN
+      ====================================== -->
+
+      <div class="ml-right">
+
+
+        <!-- MODEL PERFORMANCE IMAGE -->
+
+        <figure class="ml-image-panel">
+
+          <img
+            src="Images/ml-model-performance.png"
+            alt="Illustrative ROC curves comparing machine learning models, with XGBoost achieving an out-of-sample ROC-AUC of 0.9575"
+            loading="lazy"
+          >
+
+          <figcaption class="ml-image-caption">
+            Model Performance Comparison · Illustrative ROC Curves
+          </figcaption>
+
+        </figure>
+
+
+        <!-- ==================================
+             KPI RESULTS
+        ================================== -->
+
+        <div class="ml-results">
+
+          <div class="ml-stat">
+            <strong>15,664</strong>
+            <span>ICU patient records analysed</span>
+          </div>
+
+          <div class="ml-stat">
+            <strong>10</strong>
+            <span>Model configurations evaluated</span>
+          </div>
+
+          <div class="ml-stat">
+            <strong>0.9575</strong>
+            <span>Best out-of-sample ROC-AUC · XGBoost</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- END SECTION 03 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+     SECTION 04 — STRATEGIC CONSULTING & BUSINESS ADVISORY
+     WARM IVORY / CHAMPAGNE / MUTED GOLD
+     COMPACT DESKTOP DESIGN — NO IMAGES
+===================================================== -->
+
+<style>
+
+/* ==========================================
+   01. SECTION BASE
+========================================== */
+
+#strategic-consulting {
+  --sc-dark: #493b28;
+  --sc-heading: #59472c;
+  --sc-accent: #aa8546;
+  --sc-text: #6a5e4c;
+  --sc-border: #e4d7ba;
+
+  background: #f8f5ec;
+  color: var(--sc-dark);
+  font-family: "DM Sans", Arial, sans-serif;
+  padding: 0 0 18px;
+}
+
+#strategic-consulting,
+#strategic-consulting * {
+  box-sizing: border-box;
+}
+
+#strategic-consulting .sc-wrap {
+  width: min(94%, 1420px);
+  margin: 0 auto;
+}
+
+#strategic-consulting h2,
+#strategic-consulting h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 400;
+}
+
+#strategic-consulting .sc-label {
+  color: #98753c;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+
+/* ==========================================
+   02. FULL-WIDTH CHAMPAGNE HEADER
+========================================== */
+
+#strategic-consulting .sc-hero {
+  background: #e8dab9;
+  border-bottom: 1px solid #d9c69e;
+  padding: 15px 0 17px;
+}
+
+#strategic-consulting .sc-hero .sc-label {
+  color: #7b5b28;
+  font-size: 20px;
+  letter-spacing: 1.7px;
+  margin-bottom: 5px;
+}
+
+#strategic-consulting .sc-hero h2 {
+  color: #493b28;
+  font-size: clamp(30px, 3vw, 41px);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  margin: 0 0 7px;
+}
+
+#strategic-consulting .sc-hero h2 span {
+  color: #80602e;
+}
+
+#strategic-consulting .sc-hero-description {
+  color: #64543b;
+  font-size: 12px;
+  line-height: 1.45;
+  max-width: 1150px;
+  margin: 0;
+}
+
+
+/* ==========================================
+   03. FEATURED PROJECT
+========================================== */
+
+#strategic-consulting .sc-main {
+  padding-top: 12px;
+}
+
+#strategic-consulting .sc-project {
+  background: #fffdf8;
+  border: 1px solid #e5d9bf;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(82, 64, 35, 0.04);
+}
+
+#strategic-consulting .sc-project-head {
+  background: #f3ead6;
+  border-bottom: 1px solid #e5d8bc;
+  padding: 12px 17px;
+}
+
+#strategic-consulting .sc-project-head h3 {
+  color: #493b28;
+  font-size: clamp(22px, 2.15vw, 29px);
+  line-height: 1.16;
+  margin: 4px 0 5px;
+}
+
+#strategic-consulting .sc-client {
+  color: #8a6832;
+  font-size: 10px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+#strategic-consulting .sc-project-head p {
+  color: #6a5e4c;
+  font-size: 11px;
+  line-height: 1.45;
+  margin: 0;
+}
+
+
+/* ==========================================
+   04. COMPACT TWO-COLUMN CONTENT
+========================================== */
+
+#strategic-consulting .sc-content {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.1fr)
+    minmax(0, 0.9fr);
+  gap: 14px;
+  padding: 14px 17px 15px;
+  align-items: start;
+}
+
+#strategic-consulting .sc-left,
+#strategic-consulting .sc-right {
+  min-width: 0;
+}
+
+#strategic-consulting .sc-subtitle {
+  color: #59472c;
+  font-size: 21px;
+  line-height: 1.15;
+  margin: 0 0 9px;
+}
+
+
+/* ==========================================
+   05. FOUR ANALYSIS CARDS
+========================================== */
+
+#strategic-consulting .sc-analysis {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+#strategic-consulting .sc-analysis-item {
+  background: #f9f3e5;
+  border: 1px solid #eadfc8;
+  border-left: 3px solid #c5a66d;
+  border-radius: 7px;
+  padding: 10px 11px;
+  min-width: 0;
+}
+
+#strategic-consulting .sc-analysis-item:nth-child(2) {
+  background: #f6edd9;
+  border-left-color: #b78e4d;
+}
+
+#strategic-consulting .sc-analysis-item:nth-child(3) {
+  background: #fbf6e9;
+  border-left-color: #d1b67e;
+}
+
+#strategic-consulting .sc-analysis-item:nth-child(4) {
+  background: #f3e8cf;
+  border-left-color: #a77c39;
+}
+
+#strategic-consulting .sc-num {
+  color: #a17b3c;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+#strategic-consulting .sc-analysis-item h4 {
+  color: #493b28;
+  font-size: 11px;
+  line-height: 1.3;
+  margin: 4px 0 5px;
+}
+
+#strategic-consulting .sc-analysis-item p {
+  color: #6a5e4c;
+  font-size: 10px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+
+/* ==========================================
+   06. THREE-YEAR ROADMAP
+========================================== */
+
+#strategic-consulting .sc-roadmap-section {
+  margin: 0;
+}
+
+#strategic-consulting .sc-roadmap {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+}
+
+#strategic-consulting .sc-year {
+  min-width: 0;
+  background: #f7edda;
+  border: 1px solid #e8d9b9;
+  border-top: 3px solid #c3a46b;
+  border-radius: 7px;
+  padding: 10px;
+}
+
+#strategic-consulting .sc-year:nth-child(2) {
+  background: #f5e8cd;
+  border-top-color: #b48a47;
+}
+
+#strategic-consulting .sc-year:nth-child(3) {
+  background: #f1e1bf;
+  border-top-color: #99702e;
+}
+
+#strategic-consulting .sc-year-label {
+  color: #8c6b37;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+}
+
+#strategic-consulting .sc-year h4 {
+  color: #493b28;
+  font-size: 12px;
+  margin: 4px 0;
+}
+
+#strategic-consulting .sc-year p {
+  color: #6a5e4c;
+  font-size: 9px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+
+/* ==========================================
+   07. STRATEGIC OUTCOME
+========================================== */
+
+#strategic-consulting .sc-outcome {
+  background: #f7f0e1;
+  border: 1px solid #e7d8b9;
+  border-left: 3px solid #b28d4e;
+  border-radius: 7px;
+  padding: 10px 12px;
+  margin-top: 11px;
+}
+
+#strategic-consulting .sc-outcome .sc-label {
+  margin-bottom: 5px;
+}
+
+#strategic-consulting .sc-outcome p {
+  color: #615540;
+  font-size: 10px;
+  line-height: 1.45;
+  margin: 0;
+}
+
+
+/* ==========================================
+   08. SKILLS & PROJECT LINK
+========================================== */
+
+#strategic-consulting .sc-bottom {
+  margin-top: 11px;
+}
+
+#strategic-consulting .sc-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 7px 0 11px;
+}
+
+#strategic-consulting .sc-skills span {
+  background: #f4ead4;
+  border: 1px solid #e3d3b0;
+  color: #755b35;
+  border-radius: 20px;
+  padding: 5px 8px;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+#strategic-consulting .sc-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #765b32;
+  color: #ffffff;
+  border-radius: 24px;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  transition: background 0.2s ease;
+}
+
+#strategic-consulting .sc-link:hover {
+  background: #a17b3c;
+}
+
+
+/* ==========================================
+   09. TABLET
+========================================== */
+
+@media (max-width: 1050px) {
+
+  #strategic-consulting .sc-content {
+    grid-template-columns: 1fr;
+  }
+
+  #strategic-consulting .sc-roadmap {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+}
+
+
+/* ==========================================
+   10. MOBILE
+========================================== */
+
+@media (max-width: 650px) {
+
+  #strategic-consulting .sc-wrap {
+    width: 92%;
+  }
+
+  #strategic-consulting .sc-hero .sc-label {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  #strategic-consulting .sc-hero h2 {
+    font-size: 29px;
+  }
+
+  #strategic-consulting .sc-project-head,
+  #strategic-consulting .sc-content {
+    padding: 12px;
+  }
+
+  #strategic-consulting .sc-analysis {
+    grid-template-columns: 1fr;
+  }
+
+  #strategic-consulting .sc-roadmap {
+    grid-template-columns: 1fr;
+  }
+
+  #strategic-consulting .sc-subtitle {
+    font-size: 20px;
+  }
+
+}
+
+</style>
+
+
+<!-- =====================================================
+     SECTION 04 — HTML CONTENT
+===================================================== -->
+
+<section id="strategic-consulting">
+
+  <!-- FULL-WIDTH SECTION HEADER -->
+
+  <div class="sc-hero">
+
+    <div class="sc-wrap">
+
+      <div class="sc-label">
+        04 / STRATEGIC CONSULTING &amp; BUSINESS ADVISORY
+      </div>
+
+      <h2>
+        From Business Challenges to
+        <span>Strategic Solutions.</span>
+      </h2>
+
+      <p class="sc-hero-description">
+        Applying analytical research, commercial understanding
+        and strategic thinking to address organisational
+        challenges and develop practical, evidence-based
+        recommendations.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- FEATURED PROJECT -->
+
+  <div class="sc-main">
+
+    <div class="sc-wrap">
+
+      <article class="sc-project">
+
+        <!-- PROJECT HEADING -->
+
+        <div class="sc-project-head">
+
+          <div class="sc-label">
+            FEATURED PROJECT 01 / SOFITEL MELBOURNE ON COLLINS
+          </div>
+
+          <h3>
+            Strengthening Supplier Governance,
+            Sustainability &amp; Ethical Procurement
+          </h3>
+
+          <div class="sc-client">
+            Industry Consulting Project |
+            Monash University × Sofitel Melbourne on Collins
+          </div>
+
+          <p>
+            Collaborated on a university consulting engagement
+            examining procurement practices, supplier governance,
+            ESG considerations and modern slavery risks.
+            Applied strategic research and procurement analysis
+            to develop recommendations for stronger supplier oversight.
+          </p>
+
+        </div>
+
+
+        <!-- TWO-COLUMN CONTENT -->
+
+        <div class="sc-content">
+
+          <!-- LEFT: KEY AREAS OF ANALYSIS -->
+
+          <div class="sc-left">
+
+            <h3 class="sc-subtitle">
+              Key Areas of Analysis
+            </h3>
+
+            <div class="sc-analysis">
+
+              <div class="sc-analysis-item">
+
+                <div class="sc-num">01 /</div>
+
+                <h4>Procurement &amp; Supplier Risk</h4>
+
+                <p>
+                  Assessed supplier expenditure, labour
+                  intensity and operational criticality
+                  to identify risk exposure.
+                </p>
+
+              </div>
+
+              <div class="sc-analysis-item">
+
+                <div class="sc-num">02 /</div>
+
+                <h4>ESG &amp; Modern Slavery</h4>
+
+                <p>
+                  Examined ethical sourcing, supplier
+                  compliance and sustainability through
+                  relevant UN SDGs.
+                </p>
+
+              </div>
+
+              <div class="sc-analysis-item">
+
+                <div class="sc-num">03 /</div>
+
+                <h4>Strategic Business Analysis</h4>
+
+                <p>
+                  Applied SWOT, PESTEL and supplier
+                  prioritisation frameworks to evaluate
+                  organisational challenges.
+                </p>
+
+              </div>
+
+              <div class="sc-analysis-item">
+
+                <div class="sc-num">04 /</div>
+
+                <h4>Strategic Recommendations</h4>
+
+                <p>
+                  Contributed to a proposed three-year
+                  Supplier Excellence Program focused
+                  on governance and accountability.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <!-- STRATEGIC OUTCOME -->
+
+            <div class="sc-outcome">
+
+              <div class="sc-label">
+                STRATEGIC OUTCOME
+              </div>
+
+              <p>
+                Developed a proposed supplier governance
+                framework and phased implementation roadmap
+                to support transparent, accountable and
+                sustainable procurement practices.
+                Strengthened my capabilities in strategic
+                research, risk assessment and stakeholder
+                communication.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- RIGHT: ROADMAP, SKILLS & LINK -->
+
+          <div class="sc-right">
+
+            <div class="sc-roadmap-section">
+
+              <h3 class="sc-subtitle">
+                Three-Year Supplier Excellence Roadmap
+              </h3>
+
+              <div class="sc-roadmap">
+
+                <div class="sc-year">
+
+                  <div class="sc-year-label">
+                    YEAR 01
+                  </div>
+
+                  <h4>ESTABLISH</h4>
+
+                  <p>
+                    Strengthen documentation,
+                    supplier onboarding and
+                    governance ownership.
+                  </p>
+
+                </div>
+
+                <div class="sc-year">
+
+                  <div class="sc-year-label">
+                    YEAR 02
+                  </div>
+
+                  <h4>EMBED</h4>
+
+                  <p>
+                    Introduce supplier assessments,
+                    training and risk-based monitoring.
+                  </p>
+
+                </div>
+
+                <div class="sc-year">
+
+                  <div class="sc-year-label">
+                    YEAR 03
+                  </div>
+
+                  <h4>ASSURE</h4>
+
+                  <p>
+                    Develop compliance reviews,
+                    performance monitoring and
+                    continuous improvement.
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- SKILLS -->
+
+            <div class="sc-bottom">
+
+              <div class="sc-label">
+                SKILLS &amp; FRAMEWORKS APPLIED
+              </div>
+
+              <div class="sc-skills">
+
+                <span>Strategic Consulting</span>
+                <span>Procurement Analysis</span>
+                <span>Supplier Risk Assessment</span>
+                <span>ESG</span>
+                <span>Modern Slavery Research</span>
+                <span>SWOT</span>
+                <span>PESTEL</span>
+                <span>SDG Mapping</span>
+                <span>Business Research</span>
+                <span>Stakeholder Communication</span>
+
+              </div>
+
+
+              <!-- PROJECT LINK -->
+
+              <a
+                class="sc-link"
+                href="https://drive.google.com/file/d/1deZQc9Aq8BIANN71Crslr43CQkLTxcxi/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                VIEW FULL SOFITEL CONSULTING PROJECT ↗
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- END SECTION 04 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+     SECTION 05 — RESEARCH & DATA VISUALISATION
+     POWDER BLUE / ICE BLUE / SOFT NAVY
+     COMPACT FOUR-PROJECT LAYOUT
+===================================================== -->
+
+<style>
+
+/* ==========================================
+   01. SECTION BASE
+========================================== */
+
+#research-visualisation {
+  --rv-navy: #25465f;
+  --rv-accent: #527d9b;
+  --rv-text: #536b7e;
+  --rv-border: #d6e4ee;
+
+  background: #eef5fa;
+  color: var(--rv-navy);
+  font-family: "DM Sans", Arial, sans-serif;
+  padding: 0 0 18px;
+}
+
+#research-visualisation,
+#research-visualisation * {
+  box-sizing: border-box;
+}
+
+#research-visualisation .rv-wrap {
+  width: min(94%, 1420px);
+  margin: 0 auto;
+}
+
+#research-visualisation h2,
+#research-visualisation h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 400;
+}
+
+#research-visualisation .rv-label {
+  color: #527d9b;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+
+/* ==========================================
+   02. FULL-WIDTH POWDER-BLUE HEADER
+========================================== */
+
+#research-visualisation .rv-header {
+  background: #c8dded;
+  border-bottom: 1px solid #b7d0e2;
+  padding: 15px 0 17px;
+}
+
+#research-visualisation .rv-header .rv-label {
+  color: #315c7a;
+  font-size: 20px;
+  letter-spacing: 1.7px;
+  margin-bottom: 5px;
+}
+
+#research-visualisation .rv-header h2 {
+  color: #25465f;
+  font-size: clamp(30px, 3vw, 41px);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  margin: 0 0 7px;
+}
+
+#research-visualisation .rv-header h2 span {
+  color: #527d9b;
+}
+
+#research-visualisation .rv-header p {
+  color: #425f74;
+  font-size: 12px;
+  line-height: 1.45;
+  max-width: 1120px;
+  margin: 0;
+}
+
+
+/* ==========================================
+   03. FOUR-PROJECT GRID
+========================================== */
+
+#research-visualisation .rv-main {
+  padding-top: 12px;
+}
+
+#research-visualisation .rv-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px;
+  align-items: stretch;
+}
+
+#research-visualisation .rv-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: #ffffff;
+  border: 1px solid #d6e4ee;
+  border-top: 3px solid #7ca9c7;
+  border-radius: 9px;
+  padding: 13px 16px;
+  box-shadow: 0 4px 14px rgba(37, 70, 95, 0.04);
+}
+
+#research-visualisation .rv-card:nth-child(2) {
+  background: #f9fcff;
+  border-top-color: #628eaf;
+}
+
+#research-visualisation .rv-card:nth-child(3) {
+  background: #f5faff;
+  border-top-color: #a0bfd5;
+}
+
+#research-visualisation .rv-card:nth-child(4) {
+  background: #eaf4fb;
+  border-top-color: #507b9c;
+}
+
+
+/* ==========================================
+   04. PROJECT HEADINGS
+========================================== */
+
+#research-visualisation .rv-card-label {
+  color: #527d9b;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+#research-visualisation .rv-card h3 {
+  color: #25465f;
+  font-size: clamp(19px, 1.75vw, 24px);
+  line-height: 1.16;
+  margin: 0 0 7px;
+}
+
+#research-visualisation .rv-card p {
+  color: #536b7e;
+  font-size: 11px;
+  line-height: 1.45;
+  margin: 0 0 8px;
+}
+
+#research-visualisation .rv-card h4 {
+  color: #315c7a;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 4px 0 6px;
+}
+
+
+/* ==========================================
+   05. RESEARCH POINTS
+========================================== */
+
+#research-visualisation .rv-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px 12px;
+  margin-bottom: 9px;
+}
+
+#research-visualisation .rv-points span {
+  color: #536b7e;
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+#research-visualisation .rv-points span::before {
+  content: "•";
+  color: #628eaf;
+  font-weight: 900;
+  margin-right: 6px;
+}
+
+
+/* ==========================================
+   06. PROJECT SIGNIFICANCE
+========================================== */
+
+#research-visualisation .rv-impact {
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid #dce8f0;
+}
+
+#research-visualisation .rv-impact strong {
+  display: block;
+  color: #527d9b;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+#research-visualisation .rv-impact p {
+  color: #536b7e;
+  font-size: 10px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+
+/* ==========================================
+   07. PROJECT LINK
+========================================== */
+
+#research-visualisation .rv-link {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  background: #315c7a;
+  color: #ffffff;
+  border-radius: 22px;
+  padding: 9px 14px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  transition: background 0.2s ease;
+}
+
+#research-visualisation .rv-link:hover {
+  background: #527d9b;
+}
+
+
+/* ==========================================
+   08. RESEARCH CAPABILITIES
+========================================== */
+
+#research-visualisation .rv-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+  background: #dcebf5;
+  border: 1px solid #c8ddea;
+  border-radius: 9px;
+  padding: 11px 14px;
+  margin-top: 12px;
+}
+
+#research-visualisation .rv-tools .rv-label {
+  color: #315c7a;
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+#research-visualisation .rv-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+#research-visualisation .rv-tags span {
+  background: #ffffff;
+  border: 1px solid #c7dce9;
+  border-radius: 20px;
+  color: #426b87;
+  padding: 5px 9px;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+
+/* ==========================================
+   09. TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+  #research-visualisation .rv-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* ==========================================
+   10. MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+  #research-visualisation .rv-wrap {
+    width: 92%;
+  }
+
+  #research-visualisation .rv-header .rv-label {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  #research-visualisation .rv-header h2 {
+    font-size: 29px;
+  }
+
+  #research-visualisation .rv-card {
+    padding: 12px;
+  }
+
+  #research-visualisation .rv-points {
+    grid-template-columns: 1fr;
+  }
+
+  #research-visualisation .rv-tools {
+    align-items: flex-start;
+  }
+
+}
+
+</style>
+
+
+<!-- =====================================================
+     SECTION 05 — HTML CONTENT
+===================================================== -->
+
+<section id="research-visualisation">
+
+  <!-- ==========================================
+       FULL-WIDTH POWDER-BLUE HEADER
+  ========================================== -->
+
+  <div class="rv-header">
+
+    <div class="rv-wrap">
+
+      <div class="rv-label">
+        05 / RESEARCH &amp; DATA VISUALISATION
+      </div>
+
+      <h2>
+        Exploring Data. Understanding Patterns.
+        <span>Informing Decisions.</span>
+      </h2>
+
+      <p>
+        My academic work spans statistical research,
+        database development, economic analysis and
+        interactive data visualisation. These projects
+        demonstrate my ability to investigate complex
+        questions and translate quantitative findings
+        into meaningful insights.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==========================================
+       FOUR PROJECT CARDS
+  ========================================== -->
+
+  <div class="rv-main">
+
+    <div class="rv-wrap">
+
+      <div class="rv-grid">
+
+
+        <!-- ======================================
+             PROJECT 01 — AUSTRALIAN BUSHFIRES
+        ====================================== -->
+
+        <article class="rv-card">
+
+          <div class="rv-card-label">
+            FEATURED PROJECT 01 / DATA VISUALISATION
+          </div>
+
+          <h3>
+            Australian Bushfires:
+            From Ignition to Recovery
+          </h3>
+
+          <p>
+            Developed an interactive scrolling visualisation
+            exploring bushfire patterns, climate conditions,
+            ignition sources, geographic risk and
+            environmental impacts across Australia.
+          </p>
+
+          <h4>Key Areas of Analysis</h4>
+
+          <div class="rv-points">
+
+            <span>Climate &amp; fire conditions</span>
+            <span>Natural &amp; human ignition</span>
+            <span>Geographic risk patterns</span>
+            <span>Emissions &amp; recovery</span>
+
+          </div>
+
+          <div class="rv-impact">
+
+            <strong>Project Significance</strong>
+
+            <p>
+              Transformed complex environmental data into
+              an accessible, interactive visual narrative.
+            </p>
+
+          </div>
+
+          <a
+            class="rv-link"
+            href="https://tricia-de-rose.github.io/3179/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            EXPLORE LIVE DASHBOARD ↗
+          </a>
+
+        </article>
+
+
+        <!-- ======================================
+             PROJECT 02 — STATISTICAL RESEARCH
+        ====================================== -->
+
+        <article class="rv-card">
+
+          <div class="rv-card-label">
+            FEATURED PROJECT 02 / STATISTICAL RESEARCH
+          </div>
+
+          <h3>
+            Social Media, Public Policy
+            &amp; Behavioural Analysis
+          </h3>
+
+          <p>
+            Conducted quantitative research into public
+            attitudes towards proposed social media
+            restrictions for children under 16,
+            examining demographic and behavioural factors.
+          </p>
+
+          <h4>Research Methods</h4>
+
+          <div class="rv-points">
+
+            <span>Descriptive statistics</span>
+            <span>T-tests &amp; ANOVA</span>
+            <span>Chi-square tests</span>
+            <span>Correlation &amp; regression</span>
+
+          </div>
+
+          <div class="rv-impact">
+
+            <strong>Project Significance</strong>
+
+            <p>
+              Applied hypothesis testing and statistical
+              modelling to develop evidence-based findings.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- ======================================
+             PROJECT 03 — DATABASE MANAGEMENT
+        ====================================== -->
+
+        <article class="rv-card">
+
+          <div class="rv-card-label">
+            FEATURED PROJECT 03 / DATABASE MANAGEMENT
+          </div>
+
+          <h3>
+            Database Management
+            &amp; Oracle SQL
+          </h3>
+
+          <p>
+            Applied relational database principles and
+            Oracle SQL to organise, query and analyse
+            structured datasets.
+          </p>
+
+          <h4>Technical Approach</h4>
+
+          <div class="rv-points">
+
+            <span>Relational database design</span>
+            <span>Data normalisation</span>
+            <span>SQL joins &amp; aggregation</span>
+            <span>Data validation</span>
+
+          </div>
+
+          <div class="rv-impact">
+
+            <strong>Project Significance</strong>
+
+            <p>
+              Strengthened skills in structured data
+              management, efficient querying and
+              reliable analytical workflows.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- ======================================
+             PROJECT 04 — ECONOMIC RESEARCH
+        ====================================== -->
+
+        <article class="rv-card">
+
+          <div class="rv-card-label">
+            FEATURED PROJECT 04 / ECONOMIC RESEARCH
+          </div>
+
+          <h3>
+            Markets, Competition
+            &amp; Economic Decision-Making
+          </h3>
+
+          <p>
+            Applied economic theory and analytical
+            research to investigate market behaviour,
+            competition, pricing and business
+            decision-making.
+          </p>
+
+          <h4>Research Focus</h4>
+
+          <div class="rv-points">
+
+            <span>Market structures</span>
+            <span>Pricing &amp; efficiency</span>
+            <span>Consumer welfare</span>
+            <span>Economic policy evaluation</span>
+
+          </div>
+
+          <div class="rv-impact">
+
+            <strong>Project Significance</strong>
+
+            <p>
+              Connected economic theory with real-world
+              business challenges and market outcomes.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+      <!-- ==========================================
+           RESEARCH & TECHNICAL CAPABILITIES
+      ========================================== -->
+
+      <div class="rv-tools">
+
+        <div class="rv-label">
+          RESEARCH &amp; TECHNICAL CAPABILITIES
+        </div>
+
+        <div class="rv-tags">
+
+          <span>Statistical Analysis</span>
+          <span>R</span>
+          <span>Python</span>
+          <span>SQL</span>
+          <span>Data Visualisation</span>
+          <span>Database Design</span>
+          <span>Hypothesis Testing</span>
+          <span>Regression Analysis</span>
+          <span>Economic Research</span>
+          <span>Data Storytelling</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- END SECTION 05 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ==========================================
+     PORTFOLIO FOOTER
+     DARK NAVY / SOFT TEAL
+========================================== -->
+
+<style>
+
+.portfolio-footer {
+  background: linear-gradient(
+    120deg,
+    #071527 0%,
+    #102b40 100%
+  );
+  color: #f5f7fa;
+  font-family: "DM Sans", Arial, sans-serif;
+  padding: 30px 3% 16px;
+}
+
+.portfolio-footer * {
+  box-sizing: border-box;
+}
+
+.portfolio-footer .footer-wrap {
+  width: 100%;
+  max-width: 1420px;
+  margin: 0 auto;
+}
+
+.portfolio-footer .footer-main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+  gap: 30px;
+}
+
+.portfolio-footer .footer-label {
+  color: #9bd9d7;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin: 0 0 7px;
+}
+
+.portfolio-footer h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(25px, 2.7vw, 37px);
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 0 0 8px;
+}
+
+.portfolio-footer .footer-description {
+  color: #cddbe5;
+  font-size: 12px;
+  line-height: 1.5;
+  max-width: 680px;
+  margin: 0;
+}
+
+.portfolio-footer .footer-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.portfolio-footer .footer-button {
+  display: inline-block;
+  background: #9bd9d7;
+  color: #07192c;
+  text-decoration: none;
+  padding: 11px 20px;
+  border-radius: 25px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  transition: background 0.2s ease;
+}
+
+.portfolio-footer .footer-button:hover {
+  background: #c1eeec;
+}
+
+.portfolio-footer .footer-location {
+  color: #cddbe5;
+  font-size: 11px;
+}
+
+.portfolio-footer .footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-top: 1px solid #345064;
+  margin-top: 22px;
+  padding-top: 12px;
+}
+
+.portfolio-footer .footer-bottom p {
+  color: #cddbe5;
+  font-size: 10px;
+  margin: 0;
+}
+
+.portfolio-footer .footer-bottom span {
+  color: #9bd9d7;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .portfolio-footer {
+    padding: 26px 5% 16px;
+  }
+
+  .portfolio-footer .footer-main {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .portfolio-footer .footer-actions {
+    align-items: flex-start;
+  }
+
+  .portfolio-footer .footer-bottom {
+    align-items: flex-start;
+  }
+
+}
+
+</style>
+
+
+<footer class="portfolio-footer">
+
+  <div class="footer-wrap">
+
+    <div class="footer-main">
+
+      <!-- LEFT: CLOSING MESSAGE -->
+
+      <div>
+
+        <div class="footer-label">
+          LET'S CONNECT
+        </div>
+
+        <h2>
+          Let's Turn Ideas Into Impact.
+        </h2>
+
+        <p class="footer-description">
+          Interested in opportunities across data analytics,
+          business intelligence, finance and strategic consulting.
+          I welcome the opportunity to connect, collaborate
+          and contribute to meaningful business outcomes.
+        </p>
+
+      </div>
+
+
+      <!-- RIGHT: CONTACT BUTTON -->
+
+      <div class="footer-actions">
+
+        <a
+          href="mailto:flotriciaderose@gmail.com"
+          class="footer-button"
+        >
+          GET IN TOUCH ↗
+        </a>
+
+        <div class="footer-location">
+          Melbourne, Australia
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- BOTTOM FOOTER -->
+
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 Tricia De Rose. All rights reserved.
+      </p>
+
+      <span>
+        DATA · INSIGHT · IMPACT
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- END PORTFOLIO FOOTER -->
+
+
+
+</body>
+</html>
